@@ -1,0 +1,3 @@
+[Timestamp: 2022-11-20T12:50:21.473965100Z] [Info: Text from first logger]
+[Timestamp: 2022-11-20T12:50:21.515543600Z] [Info: Text from second logger]
+[Timestamp: 2022-11-20T12:50:21.515543600Z] [Info: Text from third logger]
