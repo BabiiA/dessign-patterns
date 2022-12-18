@@ -10,16 +10,16 @@ public enum ItalianPizzaType {
     Pepperoni("Pepperoni", ItalianPepperoniPizza::new),
     Cherry("Cherry", ItalianCherryPizza::new);
 
-    private final Supplier<Pizza> factory;
     private final String type;
+    private final Supplier<Pizza> pizzaSupplier;
 
     ItalianPizzaType(final String type, final Supplier<Pizza> factory) {
         this.type = type;
-        this.factory = factory;
+        this.pizzaSupplier = factory;
     }
 
-    public Supplier<Pizza> getFactory() {
-        return factory;
+    public Pizza getPizza() {
+        return pizzaSupplier.get();
     }
 
     public static ItalianPizzaType getPizzaType(String type) {

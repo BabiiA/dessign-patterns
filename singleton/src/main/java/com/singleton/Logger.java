@@ -9,11 +9,11 @@ import java.time.Instant;
 public class Logger {
 
     private static Logger instance = null;
-    private static final URL fileURL = Logger.class.getClassLoader().getResource("log.txt");
     private PrintWriter printWriter;
 
     private Logger() {
         System.out.println("Creating first instance");
+        final URL fileURL = Logger.class.getClassLoader().getResource("log.txt");
         try {
             final FileWriter fw = new FileWriter(fileURL.getPath());
             printWriter = new PrintWriter(fw, true);
@@ -39,8 +39,5 @@ public class Logger {
     private Instant getTime() {
         return Instant.now();
     }
-
-
-
 
 }

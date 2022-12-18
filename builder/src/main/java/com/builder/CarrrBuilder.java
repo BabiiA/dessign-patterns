@@ -1,6 +1,6 @@
 package com.builder;
 
-public class CarBuilder {
+public class CarrrBuilder {
 
     private String engine;
     private int doors;
@@ -9,32 +9,32 @@ public class CarBuilder {
     private String fogLights;
     private String battery;
 
-    public CarBuilder setEngine(String engine) {
+    public CarrrBuilder setEngine(String engine) {
         this.engine = engine;
         return this;
     }
 
-    public CarBuilder setDoors(int doors) {
+    public CarrrBuilder setDoors(int doors) {
         this.doors = doors;
         return this;
     }
 
-    public CarBuilder setSeats(int seats) {
+    public CarrrBuilder setSeats(int seats) {
         this.seats = seats;
         return this;
     }
 
-    public CarBuilder setParkingSensor(String parkingSensor) {
+    public CarrrBuilder setParkingSensor(String parkingSensor) {
         this.parkingSensor = parkingSensor;
         return this;
     }
 
-    public CarBuilder setFogLights(String fogLights) {
+    public CarrrBuilder setFogLights(String fogLights) {
         this.fogLights = fogLights;
         return this;
     }
 
-    public CarBuilder setBattery(String battery) {
+    public CarrrBuilder setBattery(String battery) {
         this.battery = battery;
         return this;
     }

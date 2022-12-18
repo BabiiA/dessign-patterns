@@ -1,5 +1,4 @@
 ``` mermaid
-
 classDiagram
     class Pizza {
         <<Interface>>
@@ -70,7 +69,7 @@ classDiagram
         - type: String
         - RomanianPizzaType()
         + getFactory(): Supplier~factory~
-        + getPizzaType(type)$: RomanianPizzaType
+        + getPizzaType(type): RomanianPizzaType
     }
 
     ItalianPizzaStore --> ItalianPizzaType

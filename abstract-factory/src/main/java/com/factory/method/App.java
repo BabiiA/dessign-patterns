@@ -12,7 +12,9 @@ public class App
     public static void main( String[] args ) {
         PizzaStore store = new RomanianPizzaStore();
         store.orderPizza("Cheese");
+
         System.out.println();
+
         store = new ItalianPizzaStore();
         store.orderPizza("Pepperoni");
     }

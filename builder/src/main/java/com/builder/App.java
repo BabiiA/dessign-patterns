@@ -8,11 +8,12 @@ public class App
 {
     public static void main( String[] args )
     {
+        //instead of this
         Car car = new Car("SimpleEngine", 4, 4, null, null, null);
-        Car car1 = new CarBuilder()
-                .setEngine("SimpleEngine")
-                .setDoors(4)
-                .setSeats(4)
-                .build();
+
+        //do this
+        Director director = new Director();
+
+        Car sportCar = director.createSportCar();
     }
 }
