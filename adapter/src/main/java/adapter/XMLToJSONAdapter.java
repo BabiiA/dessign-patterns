@@ -19,7 +19,7 @@ public class XMLToJSONAdapter implements Analysis {
     }
 
     @Override
-    public String AnaliseXML(Document document) {
+    public String analiseXML(Document document) {
         try {
             TransformerFactory tf = TransformerFactory.newInstance();
             Transformer transformer = tf.newTransformer();

@@ -9,6 +9,6 @@ public interface Analysis {
      * @param document
      * @return string with conclusion
      */
-    String AnaliseXML(Document document);
+    String analiseXML(Document document);
 
 }

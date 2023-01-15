@@ -39,23 +39,23 @@ public class KafkaConfiguration {
         return new KafkaTemplate<>(producerFactory());
     }
 
-//    @Bean
-//    public ConsumerFactory<String, User> consumerFactory() {
-//        Map<String, Object> config = new HashMap<>();
-//
-//        config.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:9092");
-//        config.put(ConsumerConfig.GROUP_ID_CONFIG, "group_id");
-//        config.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class);
-//        config.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, JsonDeserializer.class);
-//
-//        return new DefaultKafkaConsumerFactory<>(config, new StringDeserializer(), new JsonDeserializer<>(User.class));
-//    }
+    @Bean
+    public ConsumerFactory<String, User> consumerFactory() {
+        Map<String, Object> config = new HashMap<>();
 
-//    @Bean
-//    public ConcurrentKafkaListenerContainerFactory<String, User> kafkaListenerContainerFactory() {
-//        ConcurrentKafkaListenerContainerFactory<String, User> factory =
-//                new ConcurrentKafkaListenerContainerFactory<>();
-//        factory.setConsumerFactory(consumerFactory());
-//        return factory;
-//    }
+        config.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:9092");
+        config.put(ConsumerConfig.GROUP_ID_CONFIG, "group_id");
+        config.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class);
+        config.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, JsonDeserializer.class);
+
+        return new DefaultKafkaConsumerFactory<>(config, new StringDeserializer(), new JsonDeserializer<>(User.class));
+    }
+
+    @Bean
+    public ConcurrentKafkaListenerContainerFactory<String, User> kafkaListenerContainerFactory() {
+        ConcurrentKafkaListenerContainerFactory<String, User> factory =
+                new ConcurrentKafkaListenerContainerFactory<>();
+        factory.setConsumerFactory(consumerFactory());
+        return factory;
+    }
 }

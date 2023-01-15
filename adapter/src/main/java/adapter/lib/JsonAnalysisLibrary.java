@@ -10,6 +10,6 @@ public interface JsonAnalysisLibrary {
      * Analises stock data. Accepts a json object as input
      * @return a string with conclusion
      */
-    public String analiseStockData(JSONObject json);
+    String analiseStockData(JSONObject json);
 
 }
