@@ -8,7 +8,7 @@ import org.springframework.messaging.handler.annotation.Headers;
 import org.springframework.messaging.handler.annotation.Payload;
 import org.springframework.stereotype.Service;
 
-import static com.example.kafka.micro1.service.RecruitmentProducer.KAFKA_TOPIC;
+import static com.example.kafka.micro1.service.UserProducer.KAFKA_TOPIC;
 
 import lombok.extern.slf4j.Slf4j;
 

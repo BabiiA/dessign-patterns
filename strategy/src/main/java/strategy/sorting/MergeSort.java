@@ -5,8 +5,9 @@ import java.util.List;
 public class MergeSort implements SortingStrategy {
 
     @Override
-    public int[] sortArray(int[] inputList) {
-        int n = inputList.length;
+    public int[] sortArray(int[] inputArray) {
+        System.out.println("Merge sort");
+        int n = inputArray.length;
         int curr_size;
 
         // For picking starting index of
@@ -40,13 +41,13 @@ public class MergeSort implements SortingStrategy {
 
                 // Merge SubinputListays inputList[left_start...mid]
                 // & inputList[mid+1...right_end]
-                merge(inputList, left_start, mid, right_end);
+                merge(inputArray, left_start, mid, right_end);
             }
         }
-        return inputList;
+        return inputArray;
     }
 
-    private void merge(int[] inputList, int left_start, int mid, int right_end) {
+    private void merge(int[] inputArray, int left_start, int mid, int right_end) {
         int i, j, k;
         int n1 = mid- left_start+ 1;
         int n2 = right_end - mid;
@@ -58,12 +59,12 @@ public class MergeSort implements SortingStrategy {
         /* Copy data to temp inputListays L[]
         and R[] */
         for (i = 0; i < n1; i++)
-            L[i] = inputList[left_start+ i];
+            L[i] = inputArray[left_start+ i];
         for (j = 0; j < n2; j++)
-            R[j] = inputList[mid+ 1+ j];
+            R[j] = inputArray[mid+ 1+ j];
       
         /* Merge the temp inputListays back into
-        inputList[l..r]*/
+        inputArray[l..r]*/
         i = 0;
         j = 0;
         k = left_start;
@@ -71,12 +72,12 @@ public class MergeSort implements SortingStrategy {
         {
             if (L[i] <= R[j])
             {
-                inputList[k] = L[i];
+                inputArray[k] = L[i];
                 i++;
             }
             else
             {
-                inputList[k] = R[j];
+                inputArray[k] = R[j];
                 j++;
             }
             k++;
@@ -86,7 +87,7 @@ public class MergeSort implements SortingStrategy {
         L[], if there are any */
         while (i < n1)
         {
-            inputList[k] = L[i];
+            inputArray[k] = L[i];
             i++;
             k++;
         }
@@ -95,7 +96,7 @@ public class MergeSort implements SortingStrategy {
         R[], if there are any */
         while (j < n2)
         {
-            inputList[k] = R[j];
+            inputArray[k] = R[j];
             j++;
             k++;
         }

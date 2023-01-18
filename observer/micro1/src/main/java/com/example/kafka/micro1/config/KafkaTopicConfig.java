@@ -9,7 +9,7 @@ import org.springframework.kafka.core.KafkaAdmin;
 import java.util.HashMap;
 import java.util.Map;
 
-import static com.example.kafka.micro1.service.RecruitmentProducer.KAFKA_TOPIC;
+import static com.example.kafka.micro1.service.UserProducer.KAFKA_TOPIC;
 
 @Configuration
 public class KafkaTopicConfig {

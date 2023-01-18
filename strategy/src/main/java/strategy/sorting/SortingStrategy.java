@@ -4,5 +4,5 @@ import java.util.List;
 
 public interface SortingStrategy {
 
-    int[] sortArray(final int[] inputList);
+    int[] sortArray(final int[] inputArray);
 }

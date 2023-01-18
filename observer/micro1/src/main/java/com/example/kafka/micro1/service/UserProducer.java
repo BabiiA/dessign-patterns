@@ -1,6 +1,8 @@
 package com.example.kafka.micro1.service;
 
 import com.example.kafka.micro1.model.User;
+
+import org.apache.kafka.clients.producer.Producer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.kafka.support.KafkaHeaders;
@@ -12,14 +14,14 @@ import lombok.extern.slf4j.Slf4j;
 
 @Service
 @Slf4j
-public class RecruitmentProducer implements Producer {
+public class UserProducer {
 
     public static final String KAFKA_TOPIC = "testj";
     @Autowired
     private KafkaTemplate<String, User> kafkaTemplate;
 
     public void sendMessage(String name) {
-        log.info("---Sending message -> ");
+        log.info("---Sending user information -> ");
 
         Message<User> message = MessageBuilder
                 .withPayload(new User(name, "Team member", 27))
